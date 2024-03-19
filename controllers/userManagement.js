@@ -28,6 +28,7 @@ const controller = {
             if(userExist !== null){
                 if(userExist.password === req.body.password){
                     res.status(200).send({
+                        id: userExist._id,
                         userValid: true
                     });
                 }
